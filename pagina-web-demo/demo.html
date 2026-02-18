@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseños Empresariales - Soluciones Digitales Creativas</title>
+    <style>
+        :root {
+            --primary: #f59e0b;
+            --primary-dark: #d97706;
+            --secondary: #0ea5e9;
+            --secondary-dark: #0284c7;
+            --accent: #f43f5e;
+            --success: #22c55e;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-light: #f3f4f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .logo-badge {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #fff7ed 0%, #ffffff 50%, #f0f9ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+            z-index: 10;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            border: 1px solid #e5e7eb;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.25rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .service-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .feature-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        /* Slideshow Placeholder */
+        .slideshow-placeholder {
+            background: #1f2937;
+            border-radius: 16px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slideshow-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.1) 49%, rgba(255,255,255,0.1) 51%, transparent 52%);
+            background-size: 50px 50px;
+            animation: scan 2s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: #374151;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .features-list { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <div class="logo-badge">DE</div>
+                <div>
+                    <div>Diseños Empresariales</div>
+                    <small style="color: var(--text-light); font-size: 0.75rem;">Creatividad que impulsa tu negocio</small>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Portafolio</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">🚀 Transformando ideas en soluciones digitales</div>
+            <h1>Creatividad que <span class="highlight">impulsa</span> tu negocio</h1>
+            <p>Especialistas en diseño web personalizado y sistemas ERP para PYMES. Soluciones digitales que hacen crecer tu empresa.</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary">📞 Contactar Ahora</button>
+                <button class="btn btn-outline">📋 Ver Servicios</button>
+            </div>
+            <div style="margin-top: 4rem; display: flex; justify-content: center; gap: 2rem; color: var(--text-light);">
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: bold; color: var(--primary);">50+</div>
+                    <div>Proyectos Exitosos</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: bold; color: var(--secondary);">98%</div>
+                    <div>Satisfacción Clientes</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: bold; color: var(--accent);">24/7</div>
+                    <div>Soporte Técnico</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section style="background: var(--bg-light);">
+        <div class="container">
+            <h2>Por qué elegirnos</h2>
+            <p class="section-subtitle">Combinamos creatividad, tecnología y experiencia para ofrecer soluciones digitales que realmente hacen la diferencia en tu negocio.</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Diseño Web Impactante</h3>
+                    <p>Páginas web personalizadas que capturan la esencia de tu marca y generan conversiones.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Sistemas ERP Inteligentes</h3>
+                    <p>Soluciones ERP a medida que optimizan tus procesos y aumentan la productividad.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Experiencia de Usuario</h3>
+                    <p>Interfaces intuitivas y accesibles que mejoran la experiencia de tus usuarios.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Soporte Continuo</h3>
+                    <p>Asesoramiento y mantenimiento continuo para asegurar el éxito de tu proyecto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section>
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <p class="section-subtitle">Soluciones digitales completas para impulsar el crecimiento de tu negocio.</p>
+            
+            <div class="services-grid">
+                <div>
+                    <div class="slideshow-placeholder">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">📸</div>
+                            <div>Slideshow de Capturas de Pantalla</div>
+                            <div style="font-size: 0.9rem; color: #9ca3af; margin-top: 1rem;">Proyectos Web Personalizados</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Diseño Web Personalizado</h2>
+                        <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 2rem;">Creamos páginas web únicas que reflejan la identidad de tu marca y generan conversiones. Cada proyecto es completamente personalizado para adaptarse a tus necesidades específicas.</p>
+                    </div>
+                    <div class="features-list">
+                        <div class="feature-item"><div class="feature-dot"></div> Diseño responsive para todos los dispositivos</div>
+                        <div class="feature-item"><div class="feature-dot"></div> Optimización SEO para mejor posicionamiento</div>
+                        <div class="feature-item"><div class="feature-dot"></div> Integración de redes sociales y analytics</div>
+                        <div class="feature-item"><div class="feature-dot"></div> Formularios de contacto y CRM</div>
+                        <div class="feature-item"><div class="feature-dot"></div> Hosting y mantenimiento incluido</div>
+                    </div>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary">📞 Consultar Presupuesto</button>
+                        <button class="btn btn-outline">📸 Ver Portafolio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 6rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div class="service-content">
+                    <div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Sistema ERP para PYMES</h2>
+                        <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 2rem;">Soluciones ERP a medida que optimizan tus procesos y aumentan la productividad de tu empresa. Control total de tu negocio en una sola plataforma.</p>
+                    </div>
+                    <div class="features-list">
+                        <div class="feature-item"><div class="feature-dot" style="background: var(--secondary);"></div> Gestión de inventario en tiempo real</div>
+                        <div class="feature-item"><div class="feature-dot" style="background: var(--secondary);"></div> Facturación electrónica integrada</div>
+                        <div class="feature-item"><div class="feature-dot" style="background: var(--secondary);"></div> Control de stock y proveedores</div>
+                        <div class="feature-item"><div class="feature-dot" style="background: var(--secondary);"></div> Reportes y estadísticas en tiempo real</div>
+                        <div class="feature-item"><div class="feature-dot" style="background: var(--secondary);"></div> Personalizable según tu negocio</div>
+                        <div class="feature-item"><div class="feature-dot" style="background: var(--secondary);"></div> Soporte técnico 24/7</div>
+                    </div>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary" style="background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));">📞 Solicitar Demo</button>
+                        <button class="btn btn-outline" style="border-color: var(--secondary); color: var(--secondary);">📊 Ver Casos de Éxito</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="slideshow-placeholder" style="background: #0f172a;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">💻</div>
+                            <div>Slideshow del Sistema ERP</div>
+                            <div style="font-size: 0.9rem; color: #93c5fd; margin-top: 1rem;">En Acción</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section style="background: var(--bg-light);">
+        <div class="container">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <p class="section-subtitle">La satisfacción de nuestros clientes es nuestra mayor recompensa.</p>
+            
+            <div class="cards-grid">
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">👩‍💼</div>
+                    <h3 style="margin-bottom: 0.5rem;">María González</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Propietaria - González Boutique</p>
+                    <p style="font-style: italic; color: var(--text);">"El sitio web que nos crearon superó todas nuestras expectativas. Las ventas aumentaron un 40% en el primer mes."</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">👨‍💼</div>
+                    <h3 style="margin-bottom: 0.5rem;">Carlos Rodríguez</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Gerente General - Rodríguez Distribuciones</p>
+                    <p style="font-style: italic; color: var(--text);">"El sistema ERP personalizado nos permitió optimizar todos nuestros procesos. Ahora tenemos control total de nuestro inventario."</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">👩‍💻</div>
+                    <h3 style="margin-bottom: 0.5rem;">Ana Martínez</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Directora - Martínez Consultores</p>
+                    <p style="font-style: italic; color: var(--text);">"Profesionalismo, creatividad y cumplimiento de plazos. Altamente recomendados para cualquier proyecto digital."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;">
+        <div class="container" style="text-align: center;">
+            <h2 style="font-size: 3rem; margin-bottom: 1rem;">¿Listo para impulsar tu negocio?</h2>
+            <p style="font-size: 1.25rem; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9;">
+                Contáctanos hoy mismo y comencemos a trabajar juntos en tu proyecto digital. 
+                Transformamos tus ideas en soluciones que generan resultados.
+            </p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" style="background: white; color: var(--primary); border: 2px solid white;">📞 Programar Consulta</button>
+                <button class="btn btn-outline" style="background: transparent; border: 2px solid white; color: white;">📧 Contactar por Email</button>
+            </div>
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                <p style="opacity: 0.8; font-size: 0.9rem;">
+                    🚀 Entregamos proyectos en tiempo récord • 💡 Soluciones 100% personalizadas • 📈 Resultados medibles
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <div class="logo-badge">DE</div>
+                        <div>Diseños Empresariales</div>
+                    </div>
+                    <p style="color: #ffffff; margin-bottom: 2rem;">Transformamos ideas en soluciones digitales impactantes. Especialistas en diseño web y sistemas ERP para empresas.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">📱</a>
+                        <a href="#" class="social-icon">📧</a>
+                        <a href="#" class="social-icon">💼</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4 style="margin-bottom: 1.5rem;">Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Portafolio</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 style="margin-bottom: 1.5rem;">Nuestros Servicios</h4>
+                    <ul>
+                        <li>Diseño Web Personalizado</li>
+                        <li>Sistemas ERP para PYMES</li>
+                        <li>Desarrollo Frontend</li>
+                        <li>Consultoría Digital</li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 style="margin-bottom: 1.5rem;">Contacto</h4>
+                    <ul>
+                        <li>📞 +54 9 11 1234-5678</li>
+                        <li>📧 hola@diseños-empresariales.com</li>
+                        <li>📍 Av. Corrientes 1234, CABA</li>
+                        <li>⏰ Lunes a Viernes: 9:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="color: #9ca3af;">© 2024 Diseños Empresariales. Todos los derechos reservados.</p>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="#" style="color: #9ca3af;">Política de Privacidad</a>
+                    <a href="#" style="color: #9ca3af;">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animations for demo
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.9)';
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
