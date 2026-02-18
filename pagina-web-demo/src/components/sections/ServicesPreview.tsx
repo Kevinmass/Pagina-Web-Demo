@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../ui/Card'
-import { Button } from '../ui/Button'
+import Link from 'next/link'
 
 export default function ServicesPreview() {
   const services = [
@@ -64,9 +64,21 @@ export default function ServicesPreview() {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-6 flex space-x-4">
-                    <Button href={service.href}>Ver Detalles</Button>
-                    <Button variant="outline" href="/contact">Consultar</Button>
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    <Link
+                      href="/services"
+                      className="inline-flex min-w-[160px] items-center justify-center rounded-lg border border-sky-700 bg-sky-600 px-5 py-2 font-semibold text-white transition-colors hover:bg-sky-700 hover:text-white"
+                      style={{ color: '#ffffff' }}
+                    >
+                      Ver Servicios
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="inline-flex min-w-[140px] items-center justify-center rounded-lg border border-gray-900 bg-white px-5 py-2 font-semibold text-gray-900 transition-colors hover:bg-gray-100 hover:text-gray-900"
+                      style={{ color: '#111827' }}
+                    >
+                      Consultar
+                    </Link>
                   </div>
                 </CardContent>
               </Card>

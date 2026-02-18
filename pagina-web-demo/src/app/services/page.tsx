@@ -1,16 +1,14 @@
-'use client'
+﻿'use client'
 
 import { motion } from 'framer-motion'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../../components/ui/Card'
-import { Button } from '../../components/ui/Button'
 import Slideshow from '../../components/ui/Slideshow'
 
 export default function Services() {
-  // Placeholder images for the slideshow
   const webDesignImages = [
-    '/placeholder-web-1.jpg',
-    '/placeholder-web-2.jpg',
-    '/placeholder-web-3.jpg',
+    '/images/web1.png',
+    '/images/web2.png',
+    '/images/web3.png',
   ]
 
   const erpImages = [
@@ -24,7 +22,6 @@ export default function Services() {
   return (
     <main className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,15 +30,14 @@ export default function Services() {
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Nuestros <span className="bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">Servicios</span>
+            Nuestros servicios
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Soluciones digitales completas para impulsar el crecimiento de tu negocio. 
+            Soluciones digitales completas para impulsar el crecimiento de tu negocio.
             Diseño web personalizado y sistemas ERP para PYMES.
           </p>
         </motion.div>
 
-        {/* Web Design Service */}
         <motion.section
           id="web-design"
           initial={{ opacity: 0, y: 30 }}
@@ -56,8 +52,8 @@ export default function Services() {
                 <CardHeader>
                   <CardTitle className="text-4xl mb-4">Diseño Web Personalizado</CardTitle>
                   <CardDescription>
-                    Creamos páginas web únicas que reflejan la identidad de tu marca 
-                    y generan conversiones. Cada proyecto es completamente personalizado 
+                    Creamos páginas web únicas que reflejan la identidad de tu marca
+                    y generan conversiones. Cada proyecto es completamente personalizado
                     para adaptarse a tus necesidades específicas.
                   </CardDescription>
                 </CardHeader>
@@ -84,18 +80,31 @@ export default function Services() {
                       <span>Hosting y mantenimiento incluido</span>
                     </div>
                   </div>
-                  
+
                   <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" href="/contact">
-                      📞 Consultar Presupuesto
-                    </Button>
+                    <a
+                      href="https://wa.me/543585760730"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="WhatsApp"
+                      className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-600 text-white shadow-md transition-colors hover:bg-green-700"
+                    >
+                      <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M3 5a2 2 0 012-2h2.6a1 1 0 01.95.68l1.3 3.9a1 1 0 01-.3 1.08l-1.6 1.3a13.2 13.2 0 006.12 6.12l1.3-1.6a1 1 0 011.08-.3l3.9 1.3a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.16 21 3 14.84 3 7V5z"
+                        />
+                      </svg>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
             </div>
-            
+
             <div>
-              <Slideshow 
+              <Slideshow
                 images={webDesignImages}
                 autoPlay={true}
                 interval={5000}
@@ -109,7 +118,6 @@ export default function Services() {
           </div>
         </motion.section>
 
-        {/* ERP System Service */}
         <motion.section
           id="erp-system"
           initial={{ opacity: 0, y: 30 }}
@@ -120,7 +128,7 @@ export default function Services() {
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Slideshow 
+              <Slideshow
                 images={erpImages}
                 autoPlay={true}
                 interval={4000}
@@ -131,14 +139,14 @@ export default function Services() {
                 Capturas del sistema ERP en acción
               </p>
             </div>
-            
+
             <div>
               <Card>
                 <CardHeader>
                   <CardTitle className="text-4xl mb-4">Sistema ERP para PYMES</CardTitle>
                   <CardDescription>
-                    Soluciones ERP a medida que optimizan tus procesos y aumentan 
-                    la productividad de tu empresa. Control total de tu negocio 
+                    Soluciones ERP a medida que optimizan tus procesos y aumentan
+                    la productividad de tu empresa. Control total de tu negocio
                     en una sola plataforma.
                   </CardDescription>
                 </CardHeader>
@@ -169,11 +177,24 @@ export default function Services() {
                       <span>Soporte técnico 24/7</span>
                     </div>
                   </div>
-                  
+
                   <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" variant="secondary" href="/contact">
-                      📞 Solicitar Demo
-                    </Button>
+                    <a
+                      href="https://wa.me/543585760730"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="WhatsApp"
+                      className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-600 text-white shadow-md transition-colors hover:bg-green-700"
+                    >
+                      <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M3 5a2 2 0 012-2h2.6a1 1 0 01.95.68l1.3 3.9a1 1 0 01-.3 1.08l-1.6 1.3a13.2 13.2 0 006.12 6.12l1.3-1.6a1 1 0 011.08-.3l3.9 1.3a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.16 21 3 14.84 3 7V5z"
+                        />
+                      </svg>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
@@ -181,7 +202,6 @@ export default function Services() {
           </div>
         </motion.section>
 
-        {/* Process Section */}
         <motion.section
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -8,6 +8,7 @@ interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outline'
   size?: 'sm' | 'md' | 'lg'
   href?: string
+  type?: 'button' | 'submit' | 'reset'
   onClick?: () => void
   className?: string
   disabled?: boolean
@@ -18,6 +19,7 @@ export function Button({
   variant = 'primary',
   size = 'md',
   href,
+  type = 'button',
   onClick,
   className = '',
   disabled = false,
@@ -45,6 +47,7 @@ export function Button({
       className={classes}
       onClick={onClick}
       disabled={disabled}
+      type={type}
     >
       {children}
     </motion.button>
