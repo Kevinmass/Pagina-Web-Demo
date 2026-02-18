@@ -29,10 +29,10 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Nuestros servicios
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-white max-w-4xl mx-auto leading-relaxed">
             Soluciones digitales completas para impulsar el crecimiento de tu negocio.
             Diseño web personalizado y sistemas ERP para PYMES.
           </p>
@@ -58,7 +58,7 @@ export default function Services() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-4">
+                  <div className="space-y-4 text-gray-900">
                     <div className="flex items-center space-x-3">
                       <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
                       <span>Diseño responsive para todos los dispositivos</span>
@@ -151,7 +151,7 @@ export default function Services() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-4">
+                  <div className="space-y-4 text-gray-900">
                     <div className="flex items-center space-x-3">
                       <span className="w-2 h-2 bg-secondary-500 rounded-full"></span>
                       <span>Gestión de inventario en tiempo real</span>

@@ -12,7 +12,7 @@ const phones = [
 
 const emails = [
   { label: 'ignaciomagoiia@hotmail.com', href: 'mailto:ignaciomagoiia@hotmail.com' },
-  { label: '2203817@ucc.edu.ar', href: 'mailto:2203817@ucc.edu.ar' },
+  { label: 'massholderkevin@gmail.com', href: 'mailto:massholderkevin@gmail.com' },
 ]
 
 export default function Contact() {
@@ -26,8 +26,8 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">Contáctanos</h1>
-          <p className="text-xl text-gray-600 leading-relaxed">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Contáctanos</h1>
+          <p className="text-xl text-white leading-relaxed">
             Esta es nuestra información directa de contacto.
           </p>
         </motion.div>
